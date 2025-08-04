@@ -4,19 +4,30 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin>>n ;
-    int arr[n];
-    double sum = 0 ;
-    long double volume ;
-    for(int i=0 ; i<n ; i++)
+    int k2;
+    int k3;
+    int k5;
+    int k6;
+    cin>>k2>>k3>>k5>>k6 ;
+    int sum = 0 ;
+    for(int i=0; i<4; i++)
     {
-        cin>>arr[i] ;
-        sum+=arr[i] ;
+        while(k2>0 && k5>0 && k6>0 )
+        {
+            k2--;
+            k5--;
+            k6--;
+            sum+=256 ;
+
+        }
+         while(k2>0 && k3>0)
+            {
+                k2--;
+                k3--;
+                sum+=32 ;
+            }
 
     }
-    volume=((sum/100)/n)*100 ;
-    cout<<fixed<<setprecision(4);
-    cout<< volume <<endl;
+    cout<< sum <<endl ;
     return 0;
 }
